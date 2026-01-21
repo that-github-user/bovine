@@ -73,6 +73,13 @@ const gymImages = [
   { src: getImagePath("/images/gym4.jpg"), alt: "Gym space" },
   { src: getImagePath("/images/gym5.jpg"), alt: "Workout area" },
   { src: getImagePath("/images/gym6.jpg"), alt: "Fitness equipment" },
+  { src: getImagePath("/images/774_11.jpg"), alt: "Strength training facility" },
+  { src: getImagePath("/images/774_37.jpg"), alt: "Gym equipment" },
+  { src: getImagePath("/images/774_51.jpg"), alt: "Training space" },
+  { src: getImagePath("/images/774_69.jpg"), alt: "Workout equipment" },
+  { src: getImagePath("/images/774_70.jpg"), alt: "Fitness facility" },
+  { src: getImagePath("/images/774_90.jpg"), alt: "Gym interior view" },
+  { src: getImagePath("/images/774_92.jpg"), alt: "Training area" },
 ];
 
 export default function Home() {
