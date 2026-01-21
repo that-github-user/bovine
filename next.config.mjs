@@ -4,9 +4,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // For GitHub Pages deployment
-  // Uncomment and set basePath if deploying to a subdirectory (e.g., /bovine)
-  // basePath: '/bovine',
+  // For GitHub Pages deployment under /bovine/
+  basePath: '/bovine',
+  assetPrefix: '/bovine/',
   trailingSlash: true,
 };
 
