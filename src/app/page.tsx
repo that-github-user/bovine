@@ -90,8 +90,8 @@ export default function Home() {
             <Image
               src={getImagePath("/images/logo.jpg")}
               alt="Bovine Strength Systems"
-              width={280}
-              height={280}
+              width={400}
+              height={400}
               className="mx-auto rounded-lg shadow-2xl"
               priority
             />
