@@ -95,54 +95,57 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/30" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-6">
-            <Image
-              src={getImagePath("/images/logo.jpg")}
-              alt="Bovine Strength Systems"
-              width={500}
-              height={150}
-              className="mx-auto drop-shadow-2xl"
-              priority
-            />
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Semi-transparent container for hero content */}
+          <div className="bg-black/60 backdrop-blur-sm rounded-2xl p-8 md:p-12 text-center border border-white/10">
+            <div className="mb-6">
+              <Image
+                src={getImagePath("/images/logo.jpg")}
+                alt="Bovine Strength Systems"
+                width={450}
+                height={135}
+                className="mx-auto"
+                priority
+              />
+            </div>
+
+            <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-3">
+              Premium Personal Training in Monterey, California
+            </p>
+
+            <p className="text-2xl md:text-3xl text-white font-bold max-w-2xl mx-auto mb-8">
+              Build Strength. Transform Your Life.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="btn-primary text-lg">
+                Start Your Journey
+              </Link>
+              <Link href="/programs" className="btn-secondary text-lg">
+                View Programs
+              </Link>
+            </div>
           </div>
 
-          <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-4">
-            Premium Personal Training in Monterey, California
-          </p>
-
-          <p className="text-2xl md:text-4xl text-white font-bold max-w-3xl mx-auto mb-10">
-            Build Strength. Transform Your Life.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary text-lg">
-              Start Your Journey
-            </Link>
-            <Link href="/programs" className="btn-secondary text-lg">
-              View Programs
-            </Link>
-          </div>
-
-          {/* Trust indicators */}
-          <div className="mt-12 flex flex-wrap justify-center gap-8 text-gray-300 text-sm">
-            <div className="flex items-center gap-2">
+          {/* Trust indicators - outside the box */}
+          <div className="mt-8 flex flex-wrap justify-center gap-6 md:gap-10 text-gray-300 text-sm">
+            <div className="flex items-center gap-2 bg-black/40 backdrop-blur-sm px-4 py-2 rounded-full">
               <svg className="w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
               </svg>
-              <span>6,000 Sq Ft Private Facility</span>
+              <span>6,000 Sq Ft Facility</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 bg-black/40 backdrop-blur-sm px-4 py-2 rounded-full">
               <svg className="w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
               </svg>
-              <span>Expert Personal Trainers</span>
+              <span>5.0 ★ Google Rating</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 bg-black/40 backdrop-blur-sm px-4 py-2 rounded-full">
               <svg className="w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
               </svg>
-              <span>Nutrition Coaching Included</span>
+              <span>Est. 2010</span>
             </div>
           </div>
         </div>
@@ -218,7 +221,7 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-silver-dark mb-4 italic">&ldquo;In 2004, I was diagnosed with Multiple Sclerosis and was reliant on a wheelchair 80% of the time. Under Michiel&apos;s guidance at Bovine, I now use my wheelchair only for long distances, my balance and strength have improved, and I can walk a mile almost every day. I have replaced despair with hope.&rdquo;</p>
-              <p className="text-white font-semibold">— Julie Da Silva</p>
+              <p className="text-white font-semibold">— Julie D.</p>
               <p className="text-silver-dark text-sm">Google Review</p>
             </div>
 
@@ -232,7 +235,7 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-silver-dark mb-4 italic">&ldquo;I had injuries from military service and was at my heaviest ever. The team got me on a workout and nutrition plan. I went from 170 to 150 lbs, putting on muscle and feeling great! They train clients of all ages — I&apos;ve seen 80 year old clients in fantastic shape. Worth every penny.&rdquo;</p>
-              <p className="text-white font-semibold">— J.J. Snow</p>
+              <p className="text-white font-semibold">— J.J. S.</p>
               <p className="text-silver-dark text-sm">Google Review</p>
             </div>
 
@@ -246,7 +249,7 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-silver-dark mb-4 italic">&ldquo;This October marks six years of training at Bovine! I am strong. I have visible muscle that I am proud of. As a woman in her 40s, I know muscle is one of my most precious commodities. The vibe is chill and engaging — literally anyone can fit in with this crew.&rdquo;</p>
-              <p className="text-white font-semibold">— Chloé Dolata</p>
+              <p className="text-white font-semibold">— Chloé D.</p>
               <p className="text-silver-dark text-sm">6-year member</p>
             </div>
           </div>
@@ -263,7 +266,7 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-silver-dark mb-4 italic">&ldquo;I didn&apos;t want to age in place, unable to get up from a chair. 4 months in and I lost 22 pounds of fat and gained ~6 pounds of muscle. Just living life and getting around effortlessly has become my reality. Great atmosphere from the trainers to the clients. I am hooked!&rdquo;</p>
-              <p className="text-white font-semibold">— Cydney Crampton</p>
+              <p className="text-white font-semibold">— Cydney C.</p>
               <p className="text-silver-dark text-sm">Google Review</p>
             </div>
 
