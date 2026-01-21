@@ -4,9 +4,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // No basePath needed when using custom domain (boviness.com)
-  // basePath: '/bovine',
-  // assetPrefix: '/bovine/',
+  // For GitHub Pages deployment under /bovine/
+  basePath: '/bovine',
+  assetPrefix: '/bovine/',
   trailingSlash: true,
 };
 
