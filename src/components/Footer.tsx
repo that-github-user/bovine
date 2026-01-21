@@ -13,13 +13,10 @@ export default function Footer() {
               <Image
                 src={getImagePath("/images/logo.jpg")}
                 alt="Bovine Strength Systems"
-                width={50}
-                height={50}
-                className="rounded"
+                width={150}
+                height={45}
+                className="h-10 w-auto"
               />
-              <div>
-                <span className="text-lg font-bold text-white">Bovine Strength Systems</span>
-              </div>
             </Link>
             <p className="text-silver-dark text-sm max-w-md">
               Premium personal training in Monterey, CA. 6,000 sq ft of private gym space

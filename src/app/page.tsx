@@ -90,21 +90,16 @@ export default function Home() {
             <Image
               src={getImagePath("/images/logo.jpg")}
               alt="Bovine Strength Systems"
-              width={400}
-              height={400}
-              className="mx-auto rounded-lg shadow-2xl"
+              width={600}
+              height={180}
+              className="mx-auto shadow-2xl"
               priority
             />
           </div>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 tracking-tight">
-            BOVINE STRENGTH
-            <span className="block text-silver">SYSTEMS</span>
-          </h1>
-
-          <p className="text-xl md:text-2xl text-silver-dark max-w-3xl mx-auto mb-10">
+          <p className="text-xl md:text-2xl text-silver-dark max-w-3xl mx-auto mb-10 mt-6">
             Premium personal training in Monterey, California.
-            <span className="block mt-2">Build strength. Transform your life.</span>
+            <span className="block mt-2 text-2xl md:text-3xl text-white font-semibold">Build strength. Transform your life.</span>
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -24,14 +24,10 @@ export default function Header() {
             <Image
               src={getImagePath("/images/logo.jpg")}
               alt="Bovine Strength Systems"
-              width={70}
-              height={70}
-              className="rounded"
+              width={180}
+              height={54}
+              className="h-12 w-auto"
             />
-            <div className="hidden sm:block">
-              <span className="text-xl font-bold text-white">Bovine Strength</span>
-              <span className="block text-xs text-silver-dark uppercase tracking-wider">Systems</span>
-            </div>
           </Link>
 
           {/* Desktop Navigation */}
