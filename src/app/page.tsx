@@ -192,14 +192,23 @@ export default function Home() {
       {/* Testimonials Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="section-title">What Our Clients Say</h2>
-            <p className="section-subtitle max-w-2xl mx-auto">
-              Real results from real people who transformed their lives at Bovine Strength.
-            </p>
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <div className="flex items-center gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-6 h-6 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <span className="text-white font-bold text-xl">5.0</span>
+              <span className="text-silver-dark">from 10 Google Reviews</span>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Review 1 - Julie Da Silva */}
             <div className="card">
               <div className="flex items-center gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
@@ -208,11 +217,12 @@ export default function Home() {
                   </svg>
                 ))}
               </div>
-              <p className="text-silver-dark mb-4 italic">&ldquo;Matt and the team at Bovine completely changed my approach to fitness. The personalized attention and expert coaching helped me achieve goals I never thought possible.&rdquo;</p>
-              <p className="text-white font-semibold">— Michael R.</p>
-              <p className="text-silver-dark text-sm">Member since 2019</p>
+              <p className="text-silver-dark mb-4 italic">&ldquo;In 2004, I was diagnosed with Multiple Sclerosis and was reliant on a wheelchair 80% of the time. Under Michiel&apos;s guidance at Bovine, I now use my wheelchair only for long distances, my balance and strength have improved, and I can walk a mile almost every day. I have replaced despair with hope.&rdquo;</p>
+              <p className="text-white font-semibold">— Julie Da Silva</p>
+              <p className="text-silver-dark text-sm">Google Review</p>
             </div>
 
+            {/* Review 2 - J.J. Snow */}
             <div className="card">
               <div className="flex items-center gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
@@ -221,11 +231,12 @@ export default function Home() {
                   </svg>
                 ))}
               </div>
-              <p className="text-silver-dark mb-4 italic">&ldquo;The gym itself is beautiful — nothing like a typical gym. The wood beams, the atmosphere, and the equipment make you actually want to show up and work hard.&rdquo;</p>
-              <p className="text-white font-semibold">— Sarah K.</p>
-              <p className="text-silver-dark text-sm">Member since 2021</p>
+              <p className="text-silver-dark mb-4 italic">&ldquo;I had injuries from military service and was at my heaviest ever. The team got me on a workout and nutrition plan. I went from 170 to 150 lbs, putting on muscle and feeling great! They train clients of all ages — I&apos;ve seen 80 year old clients in fantastic shape. Worth every penny.&rdquo;</p>
+              <p className="text-white font-semibold">— J.J. Snow</p>
+              <p className="text-silver-dark text-sm">Google Review</p>
             </div>
 
+            {/* Review 3 - Chloé Dolata */}
             <div className="card">
               <div className="flex items-center gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
@@ -234,10 +245,55 @@ export default function Home() {
                   </svg>
                 ))}
               </div>
-              <p className="text-silver-dark mb-4 italic">&ldquo;After years of spinning my wheels at big box gyms, I finally found a place where I could learn proper form and actually see progress. Worth every penny.&rdquo;</p>
-              <p className="text-white font-semibold">— David L.</p>
-              <p className="text-silver-dark text-sm">Member since 2020</p>
+              <p className="text-silver-dark mb-4 italic">&ldquo;This October marks six years of training at Bovine! I am strong. I have visible muscle that I am proud of. As a woman in her 40s, I know muscle is one of my most precious commodities. The vibe is chill and engaging — literally anyone can fit in with this crew.&rdquo;</p>
+              <p className="text-white font-semibold">— Chloé Dolata</p>
+              <p className="text-silver-dark text-sm">6-year member</p>
             </div>
+          </div>
+
+          {/* Additional reviews row */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+            {/* Review 4 - Cydney Crampton */}
+            <div className="card">
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-silver-dark mb-4 italic">&ldquo;I didn&apos;t want to age in place, unable to get up from a chair. 4 months in and I lost 22 pounds of fat and gained ~6 pounds of muscle. Just living life and getting around effortlessly has become my reality. Great atmosphere from the trainers to the clients. I am hooked!&rdquo;</p>
+              <p className="text-white font-semibold">— Cydney Crampton</p>
+              <p className="text-silver-dark text-sm">Google Review</p>
+            </div>
+
+            {/* Review 5 - 14 year member */}
+            <div className="card">
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-silver-dark mb-4 italic">&ldquo;After being with Matt at Bovine for almost 14 years, it&apos;s probably one of the best things that ever happened to me. He&apos;s one of the best in the industry. I&apos;ve exceeded my goals exponentially in a very safe and structured environment. They train all ages from 12 to 80 years old.&rdquo;</p>
+              <p className="text-white font-semibold">— Precision Plumbing & Heating</p>
+              <p className="text-silver-dark text-sm">14-year member</p>
+            </div>
+          </div>
+
+          <div className="text-center mt-10">
+            <a
+              href="https://www.google.com/search?q=Bovine+Strength+Systems+Reviews"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-amber-500 hover:text-amber-400 font-medium inline-flex items-center gap-2"
+            >
+              See all reviews on Google
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
           </div>
         </div>
       </section>
