@@ -62,7 +62,7 @@ const features = [
     ),
     title: "Flexible Hours",
     description:
-      "Open Monday through Friday, 5:30am to 6:30pm to fit your schedule.",
+      "Open Monday through Friday, 5:00am to 6:00pm to fit your schedule.",
   },
 ];
 

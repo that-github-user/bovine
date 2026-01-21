@@ -41,8 +41,8 @@ const structuredData = {
     {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "05:30",
-      closes: "18:30",
+      opens: "05:00",
+      closes: "18:00",
     },
   ],
   aggregateRating: {

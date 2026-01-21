@@ -64,7 +64,7 @@ export default function Footer() {
                 <span className="block">Cell: (831) 277-4766</span>
               </li>
               <li className="pt-2">
-                <span className="block">Mon-Fri: 5:30am - 6:30pm</span>
+                <span className="block">Mon-Fri: 5:00am - 6:00pm</span>
               </li>
             </ul>
           </div>
