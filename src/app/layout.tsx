@@ -23,7 +23,8 @@ const structuredData = {
   description: "Premium personal training gym offering strength training, nutrition counseling, and personalized fitness programs in Monterey, California.",
   url: "https://boviness.com",
   telephone: "+1-831-717-4291",
-  email: "info@boviness.com",
+  email: "bovinestrengthsystems@gmail.com",
+  foundingDate: "2006",
   address: {
     "@type": "PostalAddress",
     streetAddress: "524 Fremont Street",

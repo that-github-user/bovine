@@ -34,7 +34,10 @@
       "Bash(export PATH=\"/c/Program Files/nodejs:$PATH\")",
       "Bash(/c/Program Files/nodejs/npm.cmd run build)",
       "Bash(powershell -File - <<'EOF'\n$env:Path = \"C:\\\\Program Files\\\\nodejs;\" + $env:Path\ncd 'C:\\\\Users\\\\silon\\\\Documents\\\\repos\\\\bovine'\nnpm run build\nEOF)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "WebFetch(domain:www.yellowpages.com)",
+      "WebFetch(domain:www.montereycountyweekly.com)",
+      "WebFetch(domain:www.montereycountynow.com)"
     ]
   }
 }
