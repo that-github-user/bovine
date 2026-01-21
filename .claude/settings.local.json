@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:boviness.com)",
+      "Bash(curl:*)",
+      "Bash(npx create-next-app@14:*)",
+      "Bash(where npm)",
+      "Bash(where:*)",
+      "Bash(cmd /c \"where npm\")",
+      "Bash(cmd /c \"npm --version\")",
+      "Bash(cmd /c \"node --version 2>&1\")",
+      "Bash(cmd /c \"echo %PATH%\")",
+      "Bash(tr:*)",
+      "Bash(powershell -Command \"node --version\")",
+      "Bash(powershell -Command \"winget --version\")",
+      "Bash(powershell -Command \"node --version; npm --version\")",
+      "Bash(powershell -Command \"& ''C:\\\\Program Files\\\\nodejs\\\\node.exe'' --version\")",
+      "Bash(\"C:\\\\Program Files\\\\nodejs\\\\npx.cmd\" create-next-app@14 . --typescript --tailwind --eslint --app --src-dir --no-import-alias --no-turbopack)",
+      "Bash(powershell -Command \"$env:PATH = ''C:\\\\Program Files\\\\nodejs;'' + $env:PATH; cd ''C:\\\\Users\\\\silon\\\\Documents\\\\repos\\\\bovine''; npx create-next-app@14 . --typescript --tailwind --eslint --app --src-dir --no-import-alias --no-turbopack --yes\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\silon\\\\Documents\\\\repos\\\\bovine\\\\setup.ps1\")",
+      "Bash(powershell -Command \"Get-ChildItem ''C:\\\\Users\\\\silon\\\\Documents\\\\repos\\\\bovine'' | Format-Table Name, Mode\")",
+      "Bash(powershell -Command:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}
