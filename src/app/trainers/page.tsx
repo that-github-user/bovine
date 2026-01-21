@@ -30,20 +30,6 @@ His training style combines traditional strength training with modern functional
 Whether your goal is weight loss, muscle building, or improved athletic performance, Travis will design a program tailored specifically to your needs and goals.`,
     isPlaceholder: false,
   },
-  {
-    name: "Coming Soon",
-    title: "Personal Trainer",
-    image: "",
-    bio: "We're expanding our team! A new trainer will be joining Bovine Strength Systems soon. Stay tuned for more information about our newest team member.",
-    isPlaceholder: true,
-  },
-  {
-    name: "Coming Soon",
-    title: "Personal Trainer",
-    image: "",
-    bio: "We're expanding our team! A new trainer will be joining Bovine Strength Systems soon. Stay tuned for more information about our newest team member.",
-    isPlaceholder: true,
-  },
 ];
 
 export default function TrainersPage() {
@@ -56,7 +42,7 @@ export default function TrainersPage() {
             Meet Our <span className="text-silver">Trainers</span>
           </h1>
           <p className="text-xl text-silver-dark max-w-3xl mx-auto">
-            Our certified personal trainers are dedicated to helping you achieve your fitness goals
+            Our experienced personal trainers are dedicated to helping you achieve your fitness goals
             with personalized programs and expert guidance.
           </p>
         </div>
