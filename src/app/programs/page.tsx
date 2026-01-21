@@ -10,26 +10,10 @@ export const metadata: Metadata = {
 const pricingPlans = [
   {
     title: "3-Day Program",
-    subtitle: "with Matt Lamarque",
-    price: "$450",
-    period: "per 4 weeks",
-    description: "Train with the owner and head trainer. Our most comprehensive program for serious results.",
-    features: [
-      "3 training sessions per week",
-      "Train with elite-level powerlifter",
-      "Access to patented equipment",
-      "Customized programming",
-      "Nutrition counseling included",
-      "12-week minimum commitment",
-    ],
-    highlighted: true,
-  },
-  {
-    title: "3-Day Program",
-    subtitle: "with Staff Trainer",
     price: "$420",
+    mattPrice: "$450",
     period: "per 4 weeks",
-    description: "Work with our expert training staff. Full programming and coaching for optimal results.",
+    description: "Our most popular option for serious results. Train 3 days per week with personalized programming.",
     features: [
       "3 training sessions per week",
       "Customized workout programs",
@@ -38,29 +22,14 @@ const pricingPlans = [
       "Nutrition counseling included",
       "12-week minimum commitment",
     ],
-    highlighted: false,
+    highlighted: true,
   },
   {
     title: "2-Day Program",
-    subtitle: "with Matt Lamarque",
-    price: "$340",
-    period: "per 4 weeks",
-    description: "Train with Matt twice weekly. Perfect for maintaining strength or supplementing other activities.",
-    features: [
-      "2 training sessions per week",
-      "Train with elite-level powerlifter",
-      "Customized programming",
-      "Nutrition counseling included",
-      "12-week minimum commitment",
-    ],
-    highlighted: false,
-  },
-  {
-    title: "2-Day Program",
-    subtitle: "with Staff Trainer",
     price: "$320",
+    mattPrice: "$340",
     period: "per 4 weeks",
-    description: "Work with our training staff twice weekly. Great for focused strength development.",
+    description: "Perfect for maintaining fitness or supplementing other activities with focused strength work.",
     features: [
       "2 training sessions per week",
       "Customized workout programs",
@@ -96,14 +65,14 @@ export default function ProgramsPage() {
 
       {/* Pricing Cards */}
       <section className="py-20 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {pricingPlans.map((plan, index) => (
               <PricingCard
                 key={index}
                 title={plan.title}
-                subtitle={plan.subtitle}
                 price={plan.price}
+                mattPrice={plan.mattPrice}
                 period={plan.period}
                 description={plan.description}
                 features={plan.features}

@@ -27,7 +27,14 @@
       "WebFetch(domain:that-github-user.github.io)",
       "WebSearch",
       "WebFetch(domain:www.yelp.com)",
-      "WebFetch(domain:www.google.com)"
+      "WebFetch(domain:www.google.com)",
+      "Bash(git revert:*)",
+      "Bash($env:Path = \"C:\\\\Program Files\\\\nodejs;$env:Path\")",
+      "Bash(npm run build:*)",
+      "Bash(export PATH=\"/c/Program Files/nodejs:$PATH\")",
+      "Bash(/c/Program Files/nodejs/npm.cmd run build)",
+      "Bash(powershell -File - <<'EOF'\n$env:Path = \"C:\\\\Program Files\\\\nodejs;\" + $env:Path\ncd 'C:\\\\Users\\\\silon\\\\Documents\\\\repos\\\\bovine'\nnpm run build\nEOF)",
+      "Bash(ls:*)"
     ]
   }
 }

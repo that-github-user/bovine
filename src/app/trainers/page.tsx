@@ -64,10 +64,10 @@ export default function TrainersPage() {
         </div>
       </section>
 
-      {/* Trainers Grid */}
+      {/* Trainers */}
       <section className="py-20 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-8">
             {trainers.map((trainer, index) => (
               <TrainerCard
                 key={index}

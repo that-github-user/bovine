@@ -1,7 +1,7 @@
 interface PricingCardProps {
   title: string;
-  subtitle?: string;
   price: string;
+  mattPrice?: string;
   period?: string;
   description: string;
   features: string[];
@@ -10,8 +10,8 @@ interface PricingCardProps {
 
 export default function PricingCard({
   title,
-  subtitle,
   price,
+  mattPrice,
   period,
   description,
   features,
@@ -32,16 +32,23 @@ export default function PricingCard({
           </span>
         </div>
       )}
-      <h3 className="text-xl font-bold text-white mb-1">{title}</h3>
-      {subtitle && (
-        <p className="text-accent text-sm font-medium mb-2">{subtitle}</p>
-      )}
-      <div className="mb-4">
-        <span className="text-4xl font-bold text-white">{price}</span>
-        {period && <span className="text-silver-dark text-sm ml-1">/{period}</span>}
+      <h3 className="text-2xl font-bold text-white mb-4">{title}</h3>
+
+      {/* Pricing */}
+      <div className="mb-6">
+        <div className="flex items-baseline gap-2 mb-1">
+          <span className="text-4xl font-bold text-white">{price}</span>
+          {period && <span className="text-silver-dark text-sm">/{period}</span>}
+        </div>
+        {mattPrice && (
+          <p className="text-accent text-sm">
+            Train with Matt Lamarque: {mattPrice}/{period}
+          </p>
+        )}
       </div>
+
       <p className="text-silver-dark text-sm mb-6">{description}</p>
-      <ul className="space-y-3 mb-6">
+      <ul className="space-y-3">
         {features.map((feature, index) => (
           <li key={index} className="flex items-start text-sm">
             <svg
