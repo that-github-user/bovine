@@ -30,6 +30,20 @@ His training style combines traditional strength training with modern functional
 Whether your goal is weight loss, muscle building, or improved athletic performance, Travis will design a program tailored specifically to your needs and goals.`,
     isPlaceholder: false,
   },
+  {
+    name: "Profile Coming Soon",
+    title: "Personal Trainer",
+    image: "",
+    bio: "Another member of our expert training team. Full profile coming soon!",
+    isPlaceholder: true,
+  },
+  {
+    name: "Profile Coming Soon",
+    title: "Personal Trainer",
+    image: "",
+    bio: "Another member of our expert training team. Full profile coming soon!",
+    isPlaceholder: true,
+  },
 ];
 
 export default function TrainersPage() {
