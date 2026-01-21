@@ -42,7 +42,7 @@ const features = [
     ),
     title: "Expert Trainers",
     description:
-      "Work with certified professionals who are passionate about helping you achieve your goals.",
+      "Work with experienced professionals who are passionate about helping you achieve your goals.",
   },
   {
     icon: (
@@ -316,7 +316,7 @@ export default function Home() {
               <h2 className="section-title">Expert Coaching, Personal Attention</h2>
               <p className="text-silver-dark text-lg mb-6">
                 At Bovine Strength, you&apos;re not just another member — you&apos;re part of a community
-                dedicated to helping you succeed. Our certified trainers bring decades of combined
+                dedicated to helping you succeed. Our trainers bring decades of combined
                 experience and a passion for helping clients of all levels reach their potential.
               </p>
               <ul className="space-y-3 mb-8">

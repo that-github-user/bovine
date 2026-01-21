@@ -169,7 +169,7 @@ export default function ProgramsPage() {
               <ul className="space-y-3 text-silver-dark">
                 <li className="flex items-start">
                   <span className="text-accent mr-2">•</span>
-                  One-on-one attention from certified trainers
+                  One-on-one attention from experienced trainers
                 </li>
                 <li className="flex items-start">
                   <span className="text-accent mr-2">•</span>
