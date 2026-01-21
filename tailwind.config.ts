@@ -16,7 +16,9 @@ const config: Config = {
           DEFAULT: "#C0C0C0",
           dark: "#888888",
         },
-        accent: "#8B0000",
+        accent: "#B45309", // Warm amber/copper
+        "accent-light": "#D97706",
+        "warm-stone": "#78716C",
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],

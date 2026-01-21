@@ -80,26 +80,39 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-zinc-900 to-black" />
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-zinc-700 via-transparent to-transparent" />
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src={getImagePath("/images/gym2.jpg")}
+            alt="Bovine Strength Systems Gym Interior"
+            fill
+            className="object-cover"
+            priority
+          />
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-black/60" />
+          {/* Gradient overlay for depth */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/30" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8">
+          <div className="mb-6">
             <Image
               src={getImagePath("/images/logo.jpg")}
               alt="Bovine Strength Systems"
-              width={600}
-              height={180}
-              className="mx-auto shadow-2xl"
+              width={500}
+              height={150}
+              className="mx-auto drop-shadow-2xl"
               priority
             />
           </div>
 
-          <p className="text-xl md:text-2xl text-silver-dark max-w-3xl mx-auto mb-10 mt-6">
-            Premium personal training in Monterey, California.
-            <span className="block mt-2 text-2xl md:text-3xl text-white font-semibold">Build strength. Transform your life.</span>
+          <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-4">
+            Premium Personal Training in Monterey, California
+          </p>
+
+          <p className="text-2xl md:text-4xl text-white font-bold max-w-3xl mx-auto mb-10">
+            Build Strength. Transform Your Life.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -110,12 +123,34 @@ export default function Home() {
               View Programs
             </Link>
           </div>
+
+          {/* Trust indicators */}
+          <div className="mt-12 flex flex-wrap justify-center gap-8 text-gray-300 text-sm">
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <span>6,000 Sq Ft Private Facility</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <span>Expert Personal Trainers</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <span>Nutrition Coaching Included</span>
+            </div>
+          </div>
         </div>
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <svg
-            className="w-6 h-6 text-silver"
+            className="w-6 h-6 text-white/70"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -154,13 +189,138 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="section-title">What Our Clients Say</h2>
+            <p className="section-subtitle max-w-2xl mx-auto">
+              Real results from real people who transformed their lives at Bovine Strength.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="card">
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-silver-dark mb-4 italic">&ldquo;Matt and the team at Bovine completely changed my approach to fitness. The personalized attention and expert coaching helped me achieve goals I never thought possible.&rdquo;</p>
+              <p className="text-white font-semibold">— Michael R.</p>
+              <p className="text-silver-dark text-sm">Member since 2019</p>
+            </div>
+
+            <div className="card">
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-silver-dark mb-4 italic">&ldquo;The gym itself is beautiful — nothing like a typical gym. The wood beams, the atmosphere, and the equipment make you actually want to show up and work hard.&rdquo;</p>
+              <p className="text-white font-semibold">— Sarah K.</p>
+              <p className="text-silver-dark text-sm">Member since 2021</p>
+            </div>
+
+            <div className="card">
+              <div className="flex items-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-silver-dark mb-4 italic">&ldquo;After years of spinning my wheels at big box gyms, I finally found a place where I could learn proper form and actually see progress. Worth every penny.&rdquo;</p>
+              <p className="text-white font-semibold">— David L.</p>
+              <p className="text-silver-dark text-sm">Member since 2020</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Meet the Trainers Preview */}
+      <section className="py-20 bg-zinc-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="section-title">Expert Coaching, Personal Attention</h2>
+              <p className="text-silver-dark text-lg mb-6">
+                At Bovine Strength, you&apos;re not just another member — you&apos;re part of a community
+                dedicated to helping you succeed. Our certified trainers bring decades of combined
+                experience and a passion for helping clients of all levels reach their potential.
+              </p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center gap-3 text-silver">
+                  <svg className="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  Customized programs for your specific goals
+                </li>
+                <li className="flex items-center gap-3 text-silver">
+                  <svg className="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  Form correction and injury prevention focus
+                </li>
+                <li className="flex items-center gap-3 text-silver">
+                  <svg className="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  Nutrition guidance included with training
+                </li>
+                <li className="flex items-center gap-3 text-silver">
+                  <svg className="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  Progress tracking and regular assessments
+                </li>
+              </ul>
+              <Link href="/trainers" className="btn-primary">
+                Meet Our Trainers
+              </Link>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="relative aspect-[3/4] rounded-lg overflow-hidden">
+                <Image
+                  src={getImagePath("/images/matt.jpg")}
+                  alt="Matt - Owner & Head Trainer"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                  <p className="text-white font-semibold">Matt</p>
+                  <p className="text-silver-dark text-sm">Owner & Head Trainer</p>
+                </div>
+              </div>
+              <div className="relative aspect-[3/4] rounded-lg overflow-hidden">
+                <Image
+                  src={getImagePath("/images/travis.jpg")}
+                  alt="Travis - Personal Trainer"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                  <p className="text-white font-semibold">Travis</p>
+                  <p className="text-silver-dark text-sm">Personal Trainer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Gallery Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="section-title">Our Facility</h2>
+            <h2 className="section-title">Tour Our Facility</h2>
             <p className="section-subtitle max-w-2xl mx-auto">
-              6,000 square feet of premium training space, equipped with everything you need.
+              6,000 square feet of premium training space featuring rustic wood beams,
+              exposed stone, and top-tier equipment.
             </p>
           </div>
 
@@ -169,15 +329,27 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zinc-950 via-zinc-900 to-zinc-950">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="section-title">Ready to Get Started?</h2>
-          <p className="section-subtitle max-w-2xl mx-auto">
-            Take the first step towards your fitness goals. Contact us today for a consultation.
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src={getImagePath("/images/gym1.jpg")}
+            alt="Bovine Strength Systems"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black/70" />
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+            Your Transformation Starts Here
+          </h2>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-10">
+            Whether you&apos;re just starting out or looking to break through a plateau,
+            we&apos;ll help you build the strength and confidence to achieve your goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary text-lg">
-              Contact Us
+            <Link href="/contact" className="btn-primary text-lg px-10">
+              Schedule a Consultation
             </Link>
             <a href="tel:831-277-4766" className="btn-secondary text-lg">
               Call (831) 277-4766
