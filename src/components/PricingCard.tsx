@@ -1,5 +1,6 @@
 interface PricingCardProps {
   title: string;
+  subtitle?: string;
   price: string;
   period?: string;
   description: string;
@@ -9,6 +10,7 @@ interface PricingCardProps {
 
 export default function PricingCard({
   title,
+  subtitle,
   price,
   period,
   description,
@@ -30,7 +32,10 @@ export default function PricingCard({
           </span>
         </div>
       )}
-      <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
+      <h3 className="text-xl font-bold text-white mb-1">{title}</h3>
+      {subtitle && (
+        <p className="text-accent text-sm font-medium mb-2">{subtitle}</p>
+      )}
       <div className="mb-4">
         <span className="text-4xl font-bold text-white">{price}</span>
         {period && <span className="text-silver-dark text-sm ml-1">/{period}</span>}

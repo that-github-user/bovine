@@ -9,14 +9,16 @@ export const metadata: Metadata = {
 
 const trainers = [
   {
-    name: "Matt",
+    name: "Matt Lamarque",
     title: "Owner & Head Trainer",
     image: getImagePath("/images/matt.jpg"),
-    bio: `Matt is the owner and founder of Bovine Strength Systems. With decades of experience in strength training and personal fitness, Matt has dedicated his career to helping clients of all levels achieve their goals.
+    bio: `Matt has been in the athletic/fitness world since he started working out with his dad at thirteen years old. At sixteen, he began competing in powerlifting and has since competed all over the world. After twenty years of competition, he has achieved an elite level in the sport, and his training protocols have been published in several internationally distributed magazines.
 
-His philosophy centers on building a strong foundation through proper form, progressive overload, and individualized programming. Whether you're a beginner looking to start your fitness journey or an experienced athlete seeking to break through plateaus, Matt's expertise and personalized approach will help you succeed.
+Through years of research and practical experience, Matt has designed five custom pieces of strength equipment—two of which have been granted United States Patents. He uses these pieces in the day-to-day training of his clients, his trainers, and himself.
 
-Matt believes that fitness is for everyone, and creates a welcoming, non-intimidating environment where clients feel supported and motivated. His passion for strength training is infectious, and he takes pride in seeing every client reach milestones they never thought possible.`,
+Early in his career, Matt worked with a local doctor treating patients who were extremely de-conditioned, post-surgical, or trying to avoid surgery—many with spine-related issues. This experience taught him the importance of progression, no matter how small the steps, and a person's accommodation to prescribed progression.
+
+Matt still competes in powerlifting and is constantly seeking new challenges in non-specific athletic competitions. He leads by example and always challenges his clients to progress. His philosophy: "Stagnancy creates weakness. Weakness breeds injury. Injury causes stagnancy. It's a vicious cycle."`,
     isPlaceholder: false,
   },
   {

@@ -10,66 +10,72 @@ export const metadata: Metadata = {
 const pricingPlans = [
   {
     title: "3-Day Program",
+    subtitle: "with Matt Lamarque",
     price: "$450",
-    period: "month",
-    description: "Our most popular option for serious results. Train 3 days per week with personalized programming.",
+    period: "per 4 weeks",
+    description: "Train with the owner and head trainer. Our most comprehensive program for serious results.",
+    features: [
+      "3 training sessions per week",
+      "Train with elite-level powerlifter",
+      "Access to patented equipment",
+      "Customized programming",
+      "Nutrition counseling included",
+      "12-week minimum commitment",
+    ],
+    highlighted: true,
+  },
+  {
+    title: "3-Day Program",
+    subtitle: "with Staff Trainer",
+    price: "$420",
+    period: "per 4 weeks",
+    description: "Work with our expert training staff. Full programming and coaching for optimal results.",
     features: [
       "3 training sessions per week",
       "Customized workout programs",
       "Form and technique coaching",
       "Progress tracking",
-      "Nutrition guidance included",
+      "Nutrition counseling included",
+      "12-week minimum commitment",
     ],
-    highlighted: true,
+    highlighted: false,
   },
   {
     title: "2-Day Program",
-    price: "$350",
-    period: "month",
-    description: "Perfect for maintaining fitness or supplementing other activities with focused strength work.",
+    subtitle: "with Matt Lamarque",
+    price: "$340",
+    period: "per 4 weeks",
+    description: "Train with Matt twice weekly. Perfect for maintaining strength or supplementing other activities.",
+    features: [
+      "2 training sessions per week",
+      "Train with elite-level powerlifter",
+      "Customized programming",
+      "Nutrition counseling included",
+      "12-week minimum commitment",
+    ],
+    highlighted: false,
+  },
+  {
+    title: "2-Day Program",
+    subtitle: "with Staff Trainer",
+    price: "$320",
+    period: "per 4 weeks",
+    description: "Work with our training staff twice weekly. Great for focused strength development.",
     features: [
       "2 training sessions per week",
       "Customized workout programs",
       "Form and technique coaching",
-      "Progress tracking",
-      "Nutrition guidance included",
-    ],
-    highlighted: false,
-  },
-  {
-    title: "Pairs Training",
-    price: "$300",
-    period: "person/month",
-    description: "Train with a partner and save. Great for couples, friends, or workout buddies.",
-    features: [
-      "3 sessions per week (per pair)",
-      "Partner accountability",
-      "Shared motivation",
-      "Individual attention within sessions",
-      "Customized for both partners",
-    ],
-    highlighted: false,
-  },
-  {
-    title: "Single Sessions",
-    price: "$75",
-    period: "session",
-    description: "Drop-in sessions for those with variable schedules or wanting to try before committing.",
-    features: [
-      "No commitment required",
-      "Full training session",
-      "Form assessment",
-      "Workout recommendations",
-      "Flexible scheduling",
+      "Nutrition counseling included",
+      "12-week minimum commitment",
     ],
     highlighted: false,
   },
 ];
 
 const packages = [
-  { sessions: "5 Sessions", price: "$350", savings: "Save $25" },
-  { sessions: "10 Sessions", price: "$650", savings: "Save $100" },
-  { sessions: "20 Sessions", price: "$1,200", savings: "Save $300" },
+  { sessions: "10 Sessions", price: "$500", perSession: "$50/session" },
+  { sessions: "20 Sessions", price: "$900", perSession: "$45/session" },
+  { sessions: "30 Sessions", price: "$1,200", perSession: "$40/session" },
 ];
 
 export default function ProgramsPage() {
@@ -91,11 +97,12 @@ export default function ProgramsPage() {
       {/* Pricing Cards */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {pricingPlans.map((plan, index) => (
               <PricingCard
                 key={index}
                 title={plan.title}
+                subtitle={plan.subtitle}
                 price={plan.price}
                 period={plan.period}
                 description={plan.description}
@@ -107,9 +114,26 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      {/* Session Packages */}
+      {/* Single Sessions & Packages */}
       <section className="py-20 bg-zinc-950">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Single Session */}
+          <div className="text-center mb-12">
+            <h2 className="section-title">Single Sessions</h2>
+            <p className="section-subtitle">
+              Drop-in training for flexible schedules or to try before committing.
+            </p>
+          </div>
+
+          <div className="max-w-md mx-auto mb-16">
+            <div className="card text-center border-2 border-zinc-700">
+              <h3 className="text-xl font-bold text-white mb-2">Single Training Session</h3>
+              <p className="text-4xl font-bold text-white mb-2">$60</p>
+              <p className="text-silver-dark">per session</p>
+            </div>
+          </div>
+
+          {/* Session Packages */}
           <div className="text-center mb-12">
             <h2 className="section-title">Session Packages</h2>
             <p className="section-subtitle">
@@ -122,15 +146,46 @@ export default function ProgramsPage() {
               <div key={index} className="card text-center">
                 <h3 className="text-xl font-bold text-white mb-2">{pkg.sessions}</h3>
                 <p className="text-3xl font-bold text-white mb-2">{pkg.price}</p>
-                <p className="text-accent text-sm font-medium">{pkg.savings}</p>
+                <p className="text-accent text-sm font-medium">{pkg.perSession}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* What's Included */}
+      {/* Training Philosophy */}
       <section className="py-20 bg-black">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="section-title">Our Training Philosophy</h2>
+            <p className="section-subtitle">
+              Strength First
+            </p>
+          </div>
+
+          <div className="prose prose-invert max-w-none">
+            <p className="text-silver-dark text-lg leading-relaxed mb-6">
+              We run a training system designed around a protocol that puts a focus on building
+              strength first. The muscles, connective tissues, and joints must be strong and stable
+              before asking the body to perform intensely in other ways. Whether those ways include
+              running, jumping, throwing, biking, swimming, or any other challenge to the body.
+            </p>
+            <p className="text-silver-dark text-lg leading-relaxed mb-6">
+              Strength comes with increased coordination and the ability to create tension by
+              learning to use the entire body in all movements. You&apos;d be surprised by how much
+              your body can do once you&apos;ve developed a baseline of strength.
+            </p>
+            <p className="text-silver-dark text-lg leading-relaxed">
+              Our approach ensures you build a foundation that supports whatever physical goals
+              you pursue—whether that&apos;s competitive athletics, recreational activities, or
+              simply living life with more energy and fewer limitations.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* What's Included */}
+      <section className="py-20 bg-zinc-950">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="section-title">What&apos;s Included</h2>
