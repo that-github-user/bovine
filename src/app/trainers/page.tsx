@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import TrainerCard from "@/components/TrainerCard";
+import { getImagePath } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Our Trainers | Bovine Strength Systems",
@@ -10,7 +11,7 @@ const trainers = [
   {
     name: "Matt",
     title: "Owner & Head Trainer",
-    image: "/images/matt.jpg",
+    image: getImagePath("/images/matt.jpg"),
     bio: `Matt is the owner and founder of Bovine Strength Systems. With decades of experience in strength training and personal fitness, Matt has dedicated his career to helping clients of all levels achieve their goals.
 
 His philosophy centers on building a strong foundation through proper form, progressive overload, and individualized programming. Whether you're a beginner looking to start your fitness journey or an experienced athlete seeking to break through plateaus, Matt's expertise and personalized approach will help you succeed.
@@ -21,7 +22,7 @@ Matt believes that fitness is for everyone, and creates a welcoming, non-intimid
   {
     name: "Travis",
     title: "Personal Trainer",
-    image: "/images/travis.jpg",
+    image: getImagePath("/images/travis.jpg"),
     bio: `Travis brings energy, enthusiasm, and expert knowledge to every training session. Specializing in functional fitness and strength development, Travis works with clients to build practical strength that translates into everyday life.
 
 His training style combines traditional strength training with modern functional movement patterns, ensuring clients develop balanced, injury-resistant physiques. Travis is known for his ability to motivate and push clients beyond their perceived limits while maintaining a supportive, encouraging atmosphere.

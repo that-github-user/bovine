@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ImageGallery from "@/components/ImageGallery";
+import { getImagePath } from "@/lib/constants";
 
 const features = [
   {
@@ -66,12 +67,12 @@ const features = [
 ];
 
 const gymImages = [
-  { src: "/images/gym1.jpg", alt: "Bovine Strength gym interior" },
-  { src: "/images/gym2.jpg", alt: "Weight training area" },
-  { src: "/images/gym3.jpg", alt: "Training equipment" },
-  { src: "/images/gym4.jpg", alt: "Gym space" },
-  { src: "/images/gym5.jpg", alt: "Workout area" },
-  { src: "/images/gym6.jpg", alt: "Fitness equipment" },
+  { src: getImagePath("/images/gym1.jpg"), alt: "Bovine Strength gym interior" },
+  { src: getImagePath("/images/gym2.jpg"), alt: "Weight training area" },
+  { src: getImagePath("/images/gym3.jpg"), alt: "Training equipment" },
+  { src: getImagePath("/images/gym4.jpg"), alt: "Gym space" },
+  { src: getImagePath("/images/gym5.jpg"), alt: "Workout area" },
+  { src: getImagePath("/images/gym6.jpg"), alt: "Fitness equipment" },
 ];
 
 export default function Home() {
@@ -87,7 +88,7 @@ export default function Home() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-8">
             <Image
-              src="/images/logo.jpg"
+              src={getImagePath("/images/logo.jpg")}
               alt="Bovine Strength Systems"
               width={280}
               height={280}

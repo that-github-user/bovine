@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { getImagePath } from "@/lib/constants";
 
 export default function Footer() {
   return (
@@ -10,7 +11,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center space-x-3 mb-4">
               <Image
-                src="/images/logo.jpg"
+                src={getImagePath("/images/logo.jpg")}
                 alt="Bovine Strength Systems"
                 width={50}
                 height={50}
